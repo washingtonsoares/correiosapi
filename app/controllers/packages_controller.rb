@@ -72,7 +72,7 @@ class PackagesController < ApplicationController
     if package
       render json: package
     else
-      render json: {'error' => 'true'}.to_json
+      render status: :bad_request
     end
 
   end
