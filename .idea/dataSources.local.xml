@@ -3,7 +3,6 @@
   <component name="dataSourceStorageLocal">
     <data-source name="Rails correios-api: development" uuid="42cc5db8-69e9-4d03-a5c2-5cfa5bb8ad80">
       <first-sync>true</first-sync>
-      <user-name>postgres</user-name>
     </data-source>
     <data-source name="Rails correios-api: production" uuid="d92ac235-8e38-4259-9241-46b3a13a6ad4">
       <user-name>correios-api</user-name>
