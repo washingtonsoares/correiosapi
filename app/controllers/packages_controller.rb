@@ -2,10 +2,11 @@ require 'correios-sro-xml'
 
 class PackagesController < ApplicationController
   before_action :set_package, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, :except => [:package_info]
   # GET /packages
   # GET /packages.json
   def index
+    puts current_user
     @packages = Package.all
   end
 
@@ -27,7 +28,7 @@ class PackagesController < ApplicationController
   # POST /packages.json
   def create
     @package = Package.new(package_params)
-
+    @package.user = current_user
     respond_to do |format|
       if @package.save
         format.html { redirect_to @package, notice: 'Package was successfully created.' }
