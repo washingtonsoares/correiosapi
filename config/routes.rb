@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 
-  mount_devise_token_auth_for 'User', at: 'auth', controllers: {
-      token_validations:  'auth/token_validations',
-      registrations:  'users/registrations'
+  mount_devise_token_auth_for 'User', at: 'auth' , controllers: {
+      registrations: 'user/registrations'
   }
 
   root "packages#index"
